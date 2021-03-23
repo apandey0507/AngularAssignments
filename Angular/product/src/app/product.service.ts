@@ -13,12 +13,19 @@ export class ProductService {
     this.productList = [];
   }
   getProducts() {
-    this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
-      this.productList = data;
-    });
+    let products = localStorage.getItem('productList');
+    if (!products) {
+      this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
+        this.productList = data;
+        localStorage.setItem('productList', JSON.stringify(this.productList));
+      });
+    } else {
+      this.productList = JSON.parse(products);
+    }
   }
   removeProduct(index: number) {
     console.log(index);
     this.productList.splice(index, 1);
+    localStorage.setItem('productList', JSON.stringify(this.productList));
   }
 }
