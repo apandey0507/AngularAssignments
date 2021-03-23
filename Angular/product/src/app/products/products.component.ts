@@ -15,6 +15,8 @@ import { ProductService } from '../product.service';
 })
 export class ProductsComponent implements OnInit {
   title = 'product';
+  descrptionLengthAllowed = 5;
+  showShortDescription = true;
   public productList: Array<Product>;
   @ViewChild('vc', { read: ViewContainerRef }) vc: ViewContainerRef;
   constructor(
@@ -38,5 +40,13 @@ export class ProductsComponent implements OnInit {
   }
   show() {
     console.log(this.productService.productList);
+  }
+  readMore(strLength) {
+    this.showShortDescription = !this.showShortDescription;
+    if (this.showShortDescription) {
+      this.descrptionLengthAllowed = 5;
+    } else {
+      this.descrptionLengthAllowed = strLength;
+    }
   }
 }
