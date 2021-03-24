@@ -1,0 +1,11 @@
+button {
+  border: none;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  background: #d30000;
+  color: #fff;
+  font-size: 1em;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}

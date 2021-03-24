@@ -14,7 +14,7 @@
     <div class="product-info">
       <h1>{{ product.productName }}</h1>
       <p class="price">
-        {{ product.productPrice | currency: "INR":"symbol":"3.1-1" }}
+        {{ product.productPrice | number: "3.1" | priceText: "INR" }}
       </p>
       <p class="description">
         {{ product.productDescription | shortText: descrptionLengthAllowed }}
@@ -29,5 +29,4 @@
     </div>
   </div>
 </div>
-
-<ng-container #vc></ng-container>
+<template #vc></template>

@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
   }
   dialog(index: number) {
     this.vc.clear();
-    import('../dialog.component').then(({ DialogComponent }) => {
+    import('../dialog/dialog.component').then(({ DialogComponent }) => {
       let dialogcomp = this.vc.createComponent(
         this.cfr.resolveComponentFactory(DialogComponent)
       );

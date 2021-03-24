@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { Product } from 'src/model/product';
 
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
   public productList: Array<Product>;
-  public dialogVisiblity = false;
+  public removedProduct: Product;
+
   constructor(private httpClient: HttpClient) {
     this.productList = [];
   }
@@ -25,7 +25,12 @@ export class ProductService {
   }
   removeProduct(index: number) {
     console.log(index);
+    this.removedProduct = this.productList[index];
     this.productList.splice(index, 1);
+    localStorage.setItem('productList', JSON.stringify(this.productList));
+  }
+  undo(index: number) {
+    this.productList[index] = this.removedProduct;
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
 }
