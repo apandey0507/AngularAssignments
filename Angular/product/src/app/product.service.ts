@@ -12,11 +12,16 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
     this.productList = [];
   }
-  getProducts() {
+  getProducts(filterEl) {
     let products = localStorage.getItem('productList');
     if (!products) {
       this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
         this.productList = data;
+        console.log(this.productList);
+        this.productList = this.productList.filter((el) => {
+          return el.productType === filterEl;
+        });
+
         localStorage.setItem('productList', JSON.stringify(this.productList));
       });
     } else {

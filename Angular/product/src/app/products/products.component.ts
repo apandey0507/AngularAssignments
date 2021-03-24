@@ -36,7 +36,7 @@ export class ProductsComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.productService.getProducts();
+    this.productService.getProducts('cam');
   }
   show() {
     console.log(this.productService.productList);

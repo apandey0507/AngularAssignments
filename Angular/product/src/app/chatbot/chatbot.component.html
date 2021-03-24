@@ -1,1 +1,8 @@
+<select [(ngModel)]="selectedItem">
+  <option *ngFor="let opt of productItem" [value]="opt[0]">
+    {{ opt[1] }}
+  </option>
+</select>
+
 <button routerLink="/products" routerLinkActive="active">Search</button>
+{{ selectedItem }}
