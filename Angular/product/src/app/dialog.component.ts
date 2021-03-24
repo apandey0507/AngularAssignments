@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, Input } from '@angular/core';
 import { ProductService } from './product.service';
 
 @Component({
@@ -9,15 +9,15 @@ import { ProductService } from './product.service';
 export class DialogComponent implements OnInit {
   @Input() index: number = 0;
 
-  @Input() dialogVisiblity: boolean = true;
+  @Input() vc: ViewContainerRef;
   constructor(public productService: ProductService) {}
   ngOnInit(): void {}
   cancel() {
-    this.dialogVisiblity = true;
+    this.vc.clear();
   }
   remove() {
     console.log(this.index);
     this.productService.removeProduct(this.index);
-    this.dialogVisiblity = true;
+    this.vc.clear();
   }
 }

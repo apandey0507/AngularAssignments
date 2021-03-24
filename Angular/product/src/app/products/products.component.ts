@@ -32,7 +32,7 @@ export class ProductsComponent implements OnInit {
         this.cfr.resolveComponentFactory(DialogComponent)
       );
       dialogcomp.instance.index = index;
-      dialogcomp.instance.dialogVisiblity = false;
+      dialogcomp.instance.vc = this.vc;
     });
   }
   ngOnInit() {
