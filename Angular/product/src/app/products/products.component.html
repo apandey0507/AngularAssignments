@@ -29,4 +29,7 @@
     </div>
   </div>
 </div>
+<div *ngIf="productService.productList.length == 0">
+  <p>No Matching Product</p>
+</div>
 <template #vc></template>

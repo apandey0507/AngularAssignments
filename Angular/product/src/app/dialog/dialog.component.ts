@@ -21,9 +21,7 @@ export class DialogComponent implements OnInit {
     private cfr: ComponentFactoryResolver
   ) {}
 
-  ngOnInit() {
-    console.log('dialog');
-  }
+  ngOnInit() {}
   cancel() {
     this.vc.clear();
   }

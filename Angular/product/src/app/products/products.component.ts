@@ -60,9 +60,7 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
-  show() {
-    console.log(this.productService.productList);
-  }
+
   readMore(strLength) {
     this.showShortDescription = !this.showShortDescription;
     if (this.showShortDescription) {

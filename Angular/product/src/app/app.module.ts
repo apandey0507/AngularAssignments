@@ -11,6 +11,7 @@ import { PriceTextPipe } from './pipes/priceText.pipe';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { FormsModule } from '@angular/forms';
 import { ToggleButtonDirective } from './toggle-button.directive';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ToggleButtonDirective } from './toggle-button.directive';
     PriceTextPipe,
     ChatbotComponent,
     ToggleButtonDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

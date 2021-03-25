@@ -1,0 +1,7 @@
+.active {
+  background-color: brown;
+  color: white;
+}
+.hidden {
+  visibility: hidden;
+}

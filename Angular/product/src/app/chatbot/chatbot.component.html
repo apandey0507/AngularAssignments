@@ -19,9 +19,12 @@
   </select>
 </div>
 
-<button
-  [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
-  routerLinkActive="active"
->
-  Search
-</button>
+<div *ngIf="selectedBrand.length > 0">
+  <button
+    [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
+    routerLinkActive="active"
+  >
+    Search
+  </button>
+</div>
+<router-outlet></router-outlet>
