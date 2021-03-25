@@ -4,6 +4,10 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 import { ProductsComponent } from './products/products.component';
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
+  {
+    path: 'products/:productType/:priceRange/:productBrand',
+    component: ProductsComponent,
+  },
   { path: '', component: ChatbotComponent },
 ];
 

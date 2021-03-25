@@ -12,15 +12,20 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
     this.productList = [];
   }
-  getProducts(filterEl) {
+  getProducts(type?, range?, brand?) {
     let products = localStorage.getItem('productList');
     if (!products) {
       this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
         this.productList = data;
-        console.log(this.productList);
-        this.productList = this.productList.filter((el) => {
-          return el.productType === filterEl;
-        });
+        if (type) {
+          this.productList = this.productList.filter((el) => {
+            return (
+              el.productType === type ||
+              el.productPrice <= range ||
+              el.productBrand === brand
+            );
+          });
+        }
 
         localStorage.setItem('productList', JSON.stringify(this.productList));
       });
@@ -28,8 +33,8 @@ export class ProductService {
       this.productList = JSON.parse(products);
     }
   }
+
   removeProduct(index: number) {
-    console.log(index);
     this.removedProduct = this.productList[index];
     this.productList.splice(index, 1);
     localStorage.setItem('productList', JSON.stringify(this.productList));

@@ -5,6 +5,8 @@ import {
   ViewContainerRef,
   ViewChild,
 } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
 import { Product } from '../../model/product';
 
 import { ProductService } from '../product.service';
@@ -16,12 +18,18 @@ import { ProductService } from '../product.service';
 export class ProductsComponent implements OnInit {
   title = 'product';
   descrptionLengthAllowed = 5;
+
+  typeFilter: string = '';
+  rangeFilter: number = 0;
+  brandFilter: string = '';
+
   showShortDescription = true;
   public productList: Array<Product>;
   @ViewChild('vc', { read: ViewContainerRef }) vc: ViewContainerRef;
   constructor(
     private cfr: ComponentFactoryResolver,
-    public productService: ProductService
+    public productService: ProductService,
+    private route: ActivatedRoute
   ) {
     this.productList = [];
   }
@@ -36,7 +44,21 @@ export class ProductsComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.productService.getProducts('cam');
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      localStorage.removeItem('productList');
+      if (params.has('productType')) {
+        this.typeFilter = params.get('productType');
+        this.rangeFilter = +params.get('priceRange');
+        this.brandFilter = params.get('productBrand');
+        this.productService.getProducts(
+          this.typeFilter,
+          this.rangeFilter,
+          this.brandFilter
+        );
+      } else {
+        this.productService.getProducts();
+      }
+    });
   }
   show() {
     console.log(this.productService.productList);

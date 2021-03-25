@@ -1,8 +1,27 @@
 <select [(ngModel)]="selectedItem">
-  <option *ngFor="let opt of productItem" [value]="opt[0]">
-    {{ opt[1] }}
+  <option *ngFor="let opt of productItem" [value]="opt.Id">
+    {{ opt.Name }}
   </option>
 </select>
 
-<button routerLink="/products" routerLinkActive="active">Search</button>
-{{ selectedItem }}
+<div *ngIf="selectedItem.length > 0">
+  <input
+    type="range"
+    min="500"
+    max="5000"
+    placeholder="Enter your Budget"
+    [(ngModel)]="priceRange"
+  /><label>{{ priceRange }}</label>
+  <select [(ngModel)]="selectedBrand" [hidden]="showBrand">
+    <option *ngFor="let opt of productBrandArray" [value]="opt">
+      {{ opt }}
+    </option>
+  </select>
+</div>
+
+<button
+  [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
+  routerLinkActive="active"
+>
+  Search
+</button>
