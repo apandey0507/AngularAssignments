@@ -1,30 +1,42 @@
-<select [(ngModel)]="selectedItem">
-  <option *ngFor="let opt of productItem" [value]="opt.Id">
-    {{ opt.Name }}
-  </option>
-</select>
+<div class="chatbot">
+  <div class="select">
+    <label>Select Product</label>
+    <select [(ngModel)]="selectedItem">
+      <option *ngFor="let opt of productItem" [value]="opt.Id">
+        {{ opt.Name }}
+      </option>
+    </select>
+  </div>
 
-<div *ngIf="selectedItem.length > 0">
-  <input
-    type="range"
-    min="500"
-    max="5000"
-    placeholder="Enter your Budget"
-    [(ngModel)]="priceRange"
-  /><label>{{ priceRange }}</label>
-  <select [(ngModel)]="selectedBrand" [hidden]="showBrand">
-    <option *ngFor="let opt of productBrandArray" [value]="opt">
-      {{ opt }}
-    </option>
-  </select>
-</div>
+  <div *ngIf="selectedItem.length > 0">
+    <label>Select Price Range</label>
+    <input
+      id="slider"
+      type="range"
+      min="500"
+      max="5000"
+      placeholder="Enter your Budget"
+      [(ngModel)]="priceRange"
+    />
+    <label class="price">{{
+      priceRange | number: "3.1" | priceText: "INR"
+    }}</label>
 
-<div *ngIf="selectedBrand.length > 0">
-  <button
-    [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
-    routerLinkActive="active"
-  >
-    Search
-  </button>
+    <label>Select Brand</label>
+    <select [(ngModel)]="selectedBrand" [hidden]="showBrand">
+      <option *ngFor="let opt of productBrandArray" [value]="opt">
+        {{ opt }}
+      </option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedBrand.length > 0">
+    <button
+      [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
+      routerLinkActive="active"
+    >
+      Search
+    </button>
+  </div>
 </div>
 <router-outlet></router-outlet>

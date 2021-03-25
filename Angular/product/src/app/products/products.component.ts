@@ -17,13 +17,11 @@ import { ProductService } from '../product.service';
 })
 export class ProductsComponent implements OnInit {
   title = 'product';
-  descrptionLengthAllowed = 5;
 
   typeFilter: string = '';
   rangeFilter: number = 0;
   brandFilter: string = '';
 
-  showShortDescription = true;
   public productList: Array<Product>;
   @ViewChild('vc', { read: ViewContainerRef }) vc: ViewContainerRef;
   constructor(
@@ -61,12 +59,5 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  readMore(strLength) {
-    this.showShortDescription = !this.showShortDescription;
-    if (this.showShortDescription) {
-      this.descrptionLengthAllowed = 5;
-    } else {
-      this.descrptionLengthAllowed = strLength;
-    }
-  }
+  readMore(strLength) {}
 }

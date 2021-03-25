@@ -5,3 +5,17 @@
 .hidden {
   visibility: hidden;
 }
+button {
+  font-size: xx-large;
+  background-color: rgb(9, 0, 128);
+  border-radius: 2px;
+  color: white;
+}
+#filter {
+  float: right;
+  margin-right: 300px;
+  color: white;
+  font-size: xx-large;
+  background-color: rgb(9, 0, 128);
+  border-radius: 2px;
+}

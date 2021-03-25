@@ -1,0 +1,74 @@
+.chatbot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: xx-large;
+  height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 #999;
+  background: #ebe9e7;
+}
+label {
+  margin: 2em;
+}
+.price {
+  margin-top: -40px;
+  font-size: 35px;
+  font-weight: bolder;
+  color: coral;
+}
+label::before {
+  content: "\a";
+  white-space: pre;
+}
+select {
+  position: relative;
+  display: flex;
+  width: 30em;
+  height: 4em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+}
+option {
+  font-size: xx-large;
+}
+#slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px !important;
+  width: 100%;
+  border-radius: 10em;
+  background-color: #1600db;
+  outline: none;
+  margin-bottom: 14px;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #1600db;
+  cursor: pointer;
+  border: 3px solid #f4f4f4;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #1600db;
+  cursor: pointer;
+  border: 3px solid #f4f4f4;
+}
