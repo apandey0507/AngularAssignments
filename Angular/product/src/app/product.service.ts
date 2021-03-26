@@ -20,8 +20,8 @@ export class ProductService {
         if (type) {
           this.productList = this.productList.filter((el) => {
             return (
-              el.productType === type ||
-              el.productPrice <= range ||
+              el.productType === type &&
+              el.productPrice <= range &&
               el.productBrand === brand
             );
           });
