@@ -1,11 +1,14 @@
 .chatbot {
+  float: left;
+  right: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px;
   font-size: xx-large;
-  height: 90vh;
+  height: 50vh;
+  width: 50vw;
   border-radius: 10px;
   box-shadow: 0 0 30px 0 #999;
   background: #ebe9e7;

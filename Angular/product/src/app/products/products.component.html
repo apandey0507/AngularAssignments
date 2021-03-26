@@ -1,34 +1,36 @@
-<div
-  class="container"
-  *ngFor="let product of productService.productList; let i = index"
->
-  <div class="box">
-    <div class="product-img">
-      <img
-        src="{{ product.productImage }}"
-        width="250"
-        height="300"
-        alt="product-img"
-      />
-    </div>
-    <div class="product-info">
-      <h1>{{ product.productName }}</h1>
-      <p class="price">
-        {{ product.productPrice | number: "3.1" | priceText: "INR" }}
-      </p>
-      <p
-        class="description"
-        [appToggleDescription]
-        [description]="product.productDescription"
-      >
-        {{ product.productDescription }}
-      </p>
+<div *ngIf="productService.productList.length != 0; else NoMatch">
+  <div
+    class="container"
+    *ngFor="let product of productService.productList; let i = index"
+  >
+    <div class="box">
+      <div class="product-img">
+        <img
+          src="{{ product.productImage }}"
+          width="250"
+          height="300"
+          alt="product-img"
+        />
+      </div>
+      <div class="product-info">
+        <h1>{{ product.productName }}</h1>
+        <p class="price">
+          {{ product.productPrice | number: "3.1" | priceText: "INR" }}
+        </p>
+        <p
+          class="description"
+          [appToggleDescription]
+          [description]="product.productDescription"
+        >
+          {{ product.productDescription }}
+        </p>
 
-      <button (click)="dialog(i)">Delete</button>
+        <button (click)="dialog(i)">Delete</button>
+      </div>
     </div>
   </div>
 </div>
-<div *ngIf="productService.productList.length == 0">
+<ng-template #NoMatch>
   <p>No Matching Product</p>
-</div>
+</ng-template>
 <template #vc></template>

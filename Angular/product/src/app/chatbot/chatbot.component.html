@@ -14,7 +14,7 @@
       id="slider"
       type="range"
       min="500"
-      max="500000"
+      max="150000"
       placeholder="Enter your Budget"
       [(ngModel)]="priceRange"
     />
@@ -32,11 +32,15 @@
 
   <div *ngIf="selectedBrand.length > 0">
     <button
-      [routerLink]="['/products', selectedItem, priceRange, selectedBrand]"
+      [routerLink]="['/products']"
+      [queryParams]="{
+        productType: selectedItem,
+        productPrice: priceRange,
+        productBrand: selectedBrand
+      }"
       routerLinkActive="active"
     >
       Search
     </button>
   </div>
 </div>
-<router-outlet></router-outlet>

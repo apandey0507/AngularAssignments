@@ -42,12 +42,14 @@ export class ProductsComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
+    this.route.queryParams.subscribe((params) => {
       localStorage.removeItem('productList');
-      if (params.has('productType')) {
-        this.typeFilter = params.get('productType');
-        this.rangeFilter = +params.get('priceRange');
-        this.brandFilter = params.get('productBrand');
+
+      if (params.productType) {
+        localStorage.removeItem('productList');
+        this.typeFilter = params.productType;
+        this.rangeFilter = +params.productPrice;
+        this.brandFilter = params.productBrand;
         this.productService.getProducts(
           this.typeFilter,
           this.rangeFilter,

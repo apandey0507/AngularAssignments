@@ -1,1 +1,9 @@
+<H1>Home Page</H1>
+<button routerLinkActive="active" routerLink="/products">All Products</button>
+<button class="btn" (click)="showChatbot()"></button>
+
+<div [hidden]="chatbot">
+  <app-chatbot></app-chatbot>
+</div>
+
 <router-outlet></router-outlet>
