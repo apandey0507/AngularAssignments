@@ -1,11 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+
+p {
+  text-align: center;
+  margin: 2em 0;
+}
+
 button {
   border: none;
   cursor: pointer;
   font-family: "Lato", sans-serif;
+  margin: 10px;
   background: #d30000;
   color: #fff;
   font-size: 1em;
   padding: 1em 1.5em;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+button:focus {
+  outline-style: none;
+}
+
+.btn {
+}
+
+.mmodal {
+  z-index: 1000;
+  position: fixed;
+  top: 30px;
+  bottom: 0;
+  left: 10%;
+  width: 500px;
+}
+.mmodal-body {
+  background: #fff;
+  margin: 40px;
+  padding: 20px;
 }

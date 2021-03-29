@@ -1,0 +1,51 @@
+<div class="mmodal">
+  <div class="mmodal-body">
+    <div class="container">
+      <div class="header">
+        <h2>Update Product</h2>
+      </div>
+      <form [formGroup]="form" class="form" (ngSubmit)="submit()">
+        <label for="productName">Product Name</label>
+        <input id="productName" formControlName="productName" />
+        <div
+          *ngIf="
+            form.controls.productName.errors?.required &&
+            form.controls.productName.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+
+        <label for="productDescription">product Description</label>
+        <textarea
+          id="productDescription"
+          formControlName="productDescription"
+        ></textarea>
+        <div
+          *ngIf="
+            form.controls.productDescription.errors?.required &&
+            form.controls.productDescription.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+
+        <label for="productPrice">product Price</label>
+        <input id="productPrice" formControlName="productPrice" />
+        <div
+          *ngIf="
+            form.controls.productDescription.errors?.required &&
+            form.controls.productDescription.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+        <button [disabled]="!form.valid">Save Product</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="mmodal-background"></div>

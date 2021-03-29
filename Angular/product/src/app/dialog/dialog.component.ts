@@ -3,6 +3,7 @@ import {
   OnInit,
   ViewContainerRef,
   Input,
+  ElementRef,
   ComponentFactoryResolver,
 } from '@angular/core';
 import { ProductService } from '../product.service';

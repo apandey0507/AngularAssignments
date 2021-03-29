@@ -44,4 +44,9 @@ export class ProductService {
     this.productList[index] = this.removedProduct;
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
+
+  updateProduct(index: number, product: Product) {
+    this.productList[index] = product;
+    localStorage.setItem('productList', JSON.stringify(this.productList));
+  }
 }

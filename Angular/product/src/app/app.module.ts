@@ -12,11 +12,14 @@ import { FormsModule } from '@angular/forms';
 import { ToggleButtonDirective } from './toggle-button.directive';
 import { HomeComponent } from './home/home.component';
 import { SrcSetPipe } from './pipes/srcSet.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UpdateProductComponent } from './update-product/update-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-
+    UpdateProductComponent,
     PriceTextPipe,
     ChatbotComponent,
     ToggleButtonDirective,
@@ -29,6 +32,8 @@ import { SrcSetPipe } from './pipes/srcSet.pipe';
     HttpClientModule,
     CommonModule,
     FormsModule,
+
+    ReactiveFormsModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

@@ -60,6 +60,19 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
+  update(index: number, product: Product) {
+    this.vc.clear();
+    import('../update-product/update-product.component').then(
+      ({ UpdateProductComponent }) => {
+        let updatecomp = this.vc.createComponent(
+          this.cfr.resolveComponentFactory(UpdateProductComponent)
+        );
+        updatecomp.instance.index = index;
+        updatecomp.instance.product = product;
+        updatecomp.instance.vc = this.vc;
+      }
+    );
+  }
 
   readMore(strLength) {}
 }
