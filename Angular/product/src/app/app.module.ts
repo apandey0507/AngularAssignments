@@ -9,7 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { PriceTextPipe } from './pipes/priceText.pipe';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { FormsModule } from '@angular/forms';
-import { ToggleButtonDirective } from './toggle-button.directive';
+import { ToggleButtonDirective } from './directive/toggle-button.directive';
 import { HomeComponent } from './home/home.component';
 import { SrcSetPipe } from './pipes/srcSet.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
