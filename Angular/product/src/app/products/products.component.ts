@@ -43,10 +43,7 @@ export class ProductsComponent implements OnInit {
   }
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
-      localStorage.removeItem('productList');
-
       if (params.productType) {
-        localStorage.removeItem('productList');
         this.typeFilter = params.productType;
         this.rangeFilter = +params.productPrice;
         this.brandFilter = params.productBrand;

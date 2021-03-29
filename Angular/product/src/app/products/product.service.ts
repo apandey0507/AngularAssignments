@@ -14,7 +14,7 @@ export class ProductService {
   }
   async getProducts(type?, range?, brand?) {
     let products = localStorage.getItem('productList');
-    if (!products) {
+    if (!products || type) {
       this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
         this.productList = data;
         if (type) {
@@ -25,9 +25,9 @@ export class ProductService {
               el.productBrand === brand
             );
           });
+        } else {
+          localStorage.setItem('productList', JSON.stringify(this.productList));
         }
-
-        localStorage.setItem('productList', JSON.stringify(this.productList));
       });
     } else {
       this.productList = JSON.parse(products);
