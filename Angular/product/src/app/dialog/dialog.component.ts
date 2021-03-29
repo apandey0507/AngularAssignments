@@ -5,6 +5,7 @@ import {
   Input,
   ComponentFactoryResolver,
 } from '@angular/core';
+import { Product } from 'src/model/product';
 import { ProductService } from '../products/product.service';
 
 @Component({
@@ -14,7 +15,7 @@ import { ProductService } from '../products/product.service';
 })
 export class DialogComponent implements OnInit {
   @Input() index: number = 0;
-
+  @Input() product: Product;
   @Input() vc: ViewContainerRef;
   constructor(
     public productService: ProductService,
@@ -34,6 +35,7 @@ export class DialogComponent implements OnInit {
       );
       undocomp.instance.index = this.index;
       undocomp.instance.vc = this.vc;
+      undocomp.instance.product = this.product;
     });
   }
 }

@@ -39,6 +39,7 @@ export class ProductsComponent implements OnInit {
       );
       dialogcomp.instance.index = index;
       dialogcomp.instance.vc = this.vc;
+      dialogcomp.instance.product = this.productService.productList[index];
     });
   }
   ngOnInit() {
