@@ -3,10 +3,9 @@ import {
   OnInit,
   ViewContainerRef,
   Input,
-  ElementRef,
   ComponentFactoryResolver,
 } from '@angular/core';
-import { ProductService } from '../product.service';
+import { ProductService } from '../products/product.service';
 
 @Component({
   selector: 'app-greet',
@@ -27,7 +26,6 @@ export class DialogComponent implements OnInit {
     this.vc.clear();
   }
   remove() {
-    console.log(this.index);
     this.productService.removeProduct(this.index);
     this.vc.clear();
     import('../Undo/undo.component').then(({ UndoComponent }) => {

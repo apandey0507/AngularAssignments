@@ -5,11 +5,11 @@ import {
   ViewContainerRef,
   ViewChild,
 } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { Product } from '../../model/product';
 
-import { ProductService } from '../product.service';
+import { ProductService } from './product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

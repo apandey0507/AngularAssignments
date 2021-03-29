@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
+import { ProductService } from '../products/product.service';
 import { Input, ViewContainerRef } from '@angular/core';
 @Component({
   selector: 'app-undo',

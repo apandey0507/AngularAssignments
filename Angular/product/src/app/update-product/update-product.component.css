@@ -12,6 +12,7 @@ button {
   margin: 10px;
   background: #d30000;
   color: #fff;
+  font-size: xx-large;
   font-size: 1em;
   padding: 1em 1.5em;
   text-transform: uppercase;
@@ -60,6 +61,7 @@ button:focus {
 }
 label {
   display: inline-block;
+  font-size: xx-large;
   margin-bottom: 5px;
 }
 
@@ -67,8 +69,9 @@ input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   display: block;
+  font-size: xx-large;
   padding: 10px;
-  font-size: 14px;
+
   font-family: inherit;
   width: 100%;
 }
@@ -81,7 +84,7 @@ textarea {
   border-radius: 4px;
   display: block;
   padding: 10px;
-  font-size: 14px;
+  font-size: xx-large;
   font-family: inherit;
   width: 100%;
 }

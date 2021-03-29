@@ -9,6 +9,5 @@ export class AppComponent {
   chatbot = true;
   showChatbot() {
     this.chatbot = !this.chatbot;
-    console.log(this.chatbot);
   }
 }

@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { ProductService } from './product.service';
+import { ProductService } from './products/product.service';
 import { ProductsComponent } from './products/products.component';
 import { PriceTextPipe } from './pipes/priceText.pipe';
 import { ChatbotComponent } from './chatbot/chatbot.component';

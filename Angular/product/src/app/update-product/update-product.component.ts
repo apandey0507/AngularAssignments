@@ -8,7 +8,7 @@ import {
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/model/product';
-import { ProductService } from '../product.service';
+import { ProductService } from '../products/product.service';
 
 @Component({
   selector: 'app-update-product',

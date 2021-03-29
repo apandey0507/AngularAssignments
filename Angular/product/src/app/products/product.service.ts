@@ -12,8 +12,7 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
     this.productList = [];
   }
-  getProducts(type?, range?, brand?) {
-    console.log(type, range, brand);
+  async getProducts(type?, range?, brand?) {
     let products = localStorage.getItem('productList');
     if (!products) {
       this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
