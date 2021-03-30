@@ -2,6 +2,8 @@
   float: right;
   background-color: brown;
   color: white;
+  position: fixed;
+  bottom: 90vh;
   width: 150px;
   height: 50px;
 }
@@ -17,6 +19,9 @@
 .btn {
   border-radius: 5px;
   width: 50px;
+  position: fixed;
+  left: 90vw;
+  top: 92vh;
   height: 50px;
   background: url(https://cdn.iconscout.com/icon/premium/png-256-thumb/filter-192-1133964.png);
   background-size: contain;
@@ -24,10 +29,14 @@
 .btn2 {
   border-radius: 5px;
   width: 50px;
+  bottom: 10vh;
+  position: fixed;
+  left: 90vw;
   height: 50px;
   background: url(https://qph.fs.quoracdn.net/main-qimg-c9836d2130f15a8a9c3fa38076fbdeb2);
   background-size: contain;
 }
+
 .btn:hover {
   border-radius: 10px;
   border: 2px blue;

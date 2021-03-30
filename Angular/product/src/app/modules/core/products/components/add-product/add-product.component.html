@@ -8,7 +8,7 @@
       <form [formGroup]="form" class="form" (ngSubmit)="submit()">
         <label for="productType">Select Type Of Product</label>
         <select formControlName="productType">
-          <option [ngValue]="null" disabled>Choose your profile</option>
+          <option [ngValue]="null" disabled>Choose Product</option>
           <option *ngFor="let product of productItem" [ngValue]="product.Id">
             {{ product.Name }}
           </option>

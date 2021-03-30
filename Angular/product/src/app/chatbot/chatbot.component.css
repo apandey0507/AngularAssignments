@@ -1,6 +1,6 @@
 .chatbot {
-  float: left;
-  right: 50vw;
+  left: 40vw;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +29,8 @@ label::before {
 select {
   position: relative;
   display: flex;
-  width: 30em;
-  height: 4em;
+  width: 15vw;
+  height: 4vh;
   line-height: 3;
   background: #2c3e50;
   overflow: hidden;

@@ -19,6 +19,8 @@
 
         <label for="productDescription">product Description</label>
         <textarea
+          rows="5"
+          cols="20"
           id="productDescription"
           formControlName="productDescription"
         ></textarea>
@@ -30,6 +32,15 @@
           class="error"
         >
           *Required
+        </div>
+        <div
+          *ngIf="
+            form.controls.productDescription.errors?.minlength &&
+            form.controls.productDescription.touched
+          "
+          class="error"
+        >
+          *MinLength should Be
         </div>
 
         <label for="productPrice">product Price</label>

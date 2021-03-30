@@ -30,12 +30,20 @@ export class UpdateProductComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       productName: ['', Validators.required],
-      productDescription: ['', Validators.required],
+      productDescription: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.maxLength(200),
+        ],
+      ],
       productPrice: [
         '',
         [Validators.required, Validators.min(500), Validators.max(1000000)],
       ],
     });
+
     this.form.patchValue(this.product);
   }
   cancel() {
