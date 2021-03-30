@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../products/product.service';
+import { ProductService } from '../../core/products/services/product.service';
 import { Input, ViewContainerRef } from '@angular/core';
 import { Product } from 'src/model/product';
 @Component({
@@ -15,7 +15,6 @@ export class UndoComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      // this.vc.clear();
       this.vc.clear();
     }, 5000);
   }

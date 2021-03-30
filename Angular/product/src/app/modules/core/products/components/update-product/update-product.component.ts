@@ -8,7 +8,7 @@ import {
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/model/product';
-import { ProductService } from '../products/product.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-update-product',
@@ -20,6 +20,7 @@ export class UpdateProductComponent implements OnInit {
   @Input() product: Product;
   @Input() vc: ViewContainerRef;
   form: FormGroup;
+
   constructor(
     public productService: ProductService,
     private cfr: ComponentFactoryResolver,

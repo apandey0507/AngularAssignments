@@ -6,7 +6,7 @@ import {
   ComponentFactoryResolver,
 } from '@angular/core';
 import { Product } from 'src/model/product';
-import { ProductService } from '../products/product.service';
+import { ProductService } from '../../core/products/services/product.service';
 
 @Component({
   selector: 'app-greet',

@@ -22,9 +22,6 @@ button:focus {
   outline-style: none;
 }
 
-.btn {
-}
-
 .mmodal {
   z-index: 1000;
   position: fixed;

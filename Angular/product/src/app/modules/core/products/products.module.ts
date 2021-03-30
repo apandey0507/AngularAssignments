@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProductsComponent } from './products.component';
+import { ProductsComponent } from './components/products/products.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,5 +17,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  declarations: [PageNotFoundComponent],
 })
 export class ProductModule {}
