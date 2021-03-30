@@ -48,4 +48,9 @@ export class ProductService {
     this.productList[index] = product;
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
+
+  addProduct(product: Product) {
+    this.productList.push(product);
+    localStorage.setItem('productList', JSON.stringify(this.productList));
+  }
 }

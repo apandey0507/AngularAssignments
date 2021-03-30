@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +13,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   chatbot = true;
+  @ViewChild('add') add;
+  constructor() {}
   showChatbot() {
     this.chatbot = !this.chatbot;
+  }
+
+  AddProduct() {
+    this.add.addProduct = !this.add.addProduct;
   }
 }

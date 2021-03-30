@@ -10,8 +10,8 @@
   height: 50vh;
   width: 50vw;
   border-radius: 10px;
-  box-shadow: 0 0 30px 0 #999;
-  background: #ebe9e7;
+  box-shadow: 0 0 30px 0 rgb(12, 16, 231);
+  background: #10e2e9;
 }
 label {
   margin: 2em;
@@ -44,6 +44,11 @@ select {
 }
 option {
   font-size: xx-large;
+}
+button {
+  background-color: blue;
+  font-size: xx-large;
+  color: white;
 }
 #slider {
   -webkit-appearance: none;

@@ -1,0 +1,82 @@
+<div class="mmodal">
+  <div class="mmodal-body">
+    <div class="container">
+      <div class="header">
+        <h2>Add Product</h2>
+        <button (click)="close()">Close</button>
+      </div>
+      <form [formGroup]="form" class="form" (ngSubmit)="submit()">
+        <label for="productType">Select Type Of Product</label>
+        <select formControlName="productType">
+          <option [ngValue]="null" disabled>Choose your profile</option>
+          <option *ngFor="let product of productItem" [ngValue]="product.Id">
+            {{ product.Name }}
+          </option>
+        </select>
+
+        <label for="productBrand">Product Brand</label>
+        <input id="productBrand" formControlName="productBrand" />
+        <div
+          *ngIf="
+            form.controls.productBrand.errors?.required &&
+            form.controls.productBrand.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+
+        <label for="productName">Product Name</label>
+        <input id="productName" formControlName="productName" />
+        <div
+          *ngIf="
+            form.controls.productName.errors?.required &&
+            form.controls.productName.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+        <label for="productImage">Product Image Url</label>
+        <input id="productImage" formControlName="productImage" />
+        <div
+          *ngIf="
+            form.controls.productImage.errors?.required &&
+            form.controls.productImage.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+        <label for="productDescription">product Description</label>
+        <textarea
+          id="productDescription"
+          formControlName="productDescription"
+        ></textarea>
+        <div
+          *ngIf="
+            form.controls.productDescription.errors?.required &&
+            form.controls.productDescription.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+
+        <label for="productPrice">product Price</label>
+        <input id="productPrice" formControlName="productPrice" />
+        <div
+          *ngIf="
+            form.controls.productDescription.errors?.required &&
+            form.controls.productDescription.touched
+          "
+          class="error"
+        >
+          *Required
+        </div>
+        <button>Save Product</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="mmodal-background"></div>

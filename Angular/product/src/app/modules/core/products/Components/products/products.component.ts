@@ -7,9 +7,9 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Product } from '../../model/product';
+import { Product } from '../../../../../../model/product';
 
-import { ProductService } from './product.service';
+import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -33,14 +33,16 @@ export class ProductsComponent implements OnInit {
   }
   dialog(index: number) {
     this.vc.clear();
-    import('../dialog/dialog.component').then(({ DialogComponent }) => {
-      let dialogcomp = this.vc.createComponent(
-        this.cfr.resolveComponentFactory(DialogComponent)
-      );
-      dialogcomp.instance.index = index;
-      dialogcomp.instance.vc = this.vc;
-      dialogcomp.instance.product = this.productService.productList[index];
-    });
+    import('../../../../../Shared/dialog/dialog.component').then(
+      ({ DialogComponent }) => {
+        let dialogcomp = this.vc.createComponent(
+          this.cfr.resolveComponentFactory(DialogComponent)
+        );
+        dialogcomp.instance.index = index;
+        dialogcomp.instance.vc = this.vc;
+        dialogcomp.instance.product = this.productService.productList[index];
+      }
+    );
   }
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
