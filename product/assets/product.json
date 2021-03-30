@@ -1,0 +1,229 @@
+[
+  {
+    "productName": "Cam1",
+    "productType": "cam",
+    "productBrand": "Nikon",
+    "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productPrice": 3000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Cam2",
+    "productType": "cam",
+    "productBrand": "Sony",
+    "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productPrice": 8000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Cam3",
+    "productType": "cam",
+    "productBrand": "Canon",
+    "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productPrice": 10000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Cam4",
+    "productType": "cam",
+    "productBrand": "FujiFilms",
+    "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productPrice": 13000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+
+  {
+    "productName": "Sennheiser Buds 320",
+    "productType": "eb",
+    "productBrand": "Sennheiser",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 8000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Shure 360",
+    "productType": "eb",
+    "productBrand": "Shure",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 9000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Sony XD",
+    "productType": "eb",
+    "productBrand": "Sony",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 13000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "BW360",
+    "productType": "eb",
+    "productBrand": "Bowers & Wilkins",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 3000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Cam5",
+    "productType": "cam",
+    "productBrand": "Panasonic",
+    "productImage": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productPrice": 15000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+
+  {
+    "productName": "Jabra Pods",
+    "productType": "eb",
+    "productBrand": "Jabra",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 4000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "RHA 8D",
+    "productType": "eb",
+    "productBrand": "RHA",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 3000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Fiio SoundX",
+    "productType": "eb",
+    "productBrand": "FiiO",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 3000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Bose Sky 360",
+    "productType": "eb",
+    "productBrand": "Bose",
+    "productImage": "https://feedmotorsports.com/photos/product/4/176/4.jpg",
+    "productPrice": 3000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "IPhone 12 Pro",
+    "productType": "ph",
+    "productBrand": "Apple",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71YlH-4MUQL._SX679_.jpg",
+    "productPrice": 119000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Huawei Link+",
+    "productType": "ph",
+    "productBrand": "Huawei",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 35000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Nokia Z",
+    "productType": "ph",
+    "productBrand": "Nokia",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 45000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Sony XZone",
+    "productType": "ph",
+    "productBrand": "Sony",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 55000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "HTC Meteorite",
+    "productType": "ph",
+    "productBrand": "HTC",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 65000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Moto Ping",
+    "productType": "ph",
+    "productBrand": "Motorola",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 55000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Lenovo 360",
+    "productType": "ph",
+    "productBrand": "Lenovo",
+    "productImage": "https://images-na.ssl-images-amazon.com/images/I/71cLxfNqyFL._SL1500_.jpg",
+    "productPrice": 25000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "MacBook Air",
+    "productType": "lp",
+    "productBrand": "Apple",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 119000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Acer Edge",
+    "productType": "lp",
+    "productBrand": "Acer",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 35000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Asus Predator",
+    "productType": "lp",
+    "productBrand": "Asus",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 45000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Sony XZone",
+    "productType": "lp",
+    "productBrand": "Sony",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 55000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Dell Latitude",
+    "productType": "lp",
+    "productBrand": "Dell",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 65000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "AGB Vostros",
+    "productType": "lp",
+    "productBrand": "AGB",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 55000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+  {
+    "productName": "Lenovo 360",
+    "productType": "lp",
+    "productBrand": "Lenovo",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 25000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  },
+
+  {
+    "productName": "HP Pavalion",
+    "productType": "lp",
+    "productBrand": "HP",
+    "productImage": "https://i.dell.com/is/image/DellContent//content/dam/global-asset-library/Products/Notebooks/Vostro/15_3500_non-touch/dv3500nt_cnb_05000ff090_bk.psd?fmt=pjpg&pscan=auto&scl=1&hei=402&wid=636&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&size=636,402",
+    "productPrice": 67000,
+    "productDescription": "Lens 35.0mm ƒ/6.3 1/125s ISO 800"
+  }
+]
