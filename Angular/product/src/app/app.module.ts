@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { ProductService } from './modules/core/products/services/product.service';
-import { ProductsComponent } from './modules/core/products/Components/products/products.component';
+import { ProductsComponent } from './modules/core/products/components/products/products.component';
 import { PriceTextPipe } from './pipes/priceText.pipe';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { FormsModule } from '@angular/forms';
@@ -13,8 +13,8 @@ import { ToggleButtonDirective } from './directive/toggle-button.directive';
 import { HomeComponent } from './home/home.component';
 import { SrcSetPipe } from './pipes/srcSet.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UpdateProductComponent } from './modules/core/products/Components/update-product/update-product.component';
-import { AddProductComponent } from './modules/core/products/Components/add-product/add-product.component';
+import { UpdateProductComponent } from './modules/core/products/components/update-product/update-product.component';
+import { AddProductComponent } from './modules/core/products/components/add-product/add-product.component';
 
 @NgModule({
   declarations: [

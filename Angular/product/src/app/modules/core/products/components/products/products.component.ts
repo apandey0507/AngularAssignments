@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
   }
   dialog(index: number) {
     this.vc.clear();
-    import('../../../../../Shared/dialog/dialog.component').then(
+    import('../../../../Shared/dialog/dialog.component').then(
       ({ DialogComponent }) => {
         let dialogcomp = this.vc.createComponent(
           this.cfr.resolveComponentFactory(DialogComponent)
