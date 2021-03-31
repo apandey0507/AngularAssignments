@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   chatbot = false;
-  showChatbot() {
+  showChatbot(): void {
     this.chatbot = !this.chatbot;
   }
   constructor() {}

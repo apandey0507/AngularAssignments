@@ -3,10 +3,10 @@ import { currencySymbol } from '../Constants/CurrencySymbol';
 @Pipe({
   name: 'priceText',
 })
-export class PriceTextPipe {
+export class PriceTextPipe implements PipeTransform {
   transform(value: string, args: string): string {
-    let type = args ? args : 'INR';
-    let symbol = currencySymbol[type];
+    const type = args ? args : 'INR';
+    const symbol = currencySymbol[type];
     return symbol + value;
   }
 }

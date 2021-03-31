@@ -11,12 +11,12 @@ import {
 })
 export class ToggleButtonDirective implements OnInit {
   @Input() description: string;
-  @Input() limit: number = 5;
+  @Input() limit = 5;
   private toggle = false;
 
-  @HostListener('click', ['$event']) onClick($event) {
+  @HostListener('click', ['$event']) onClick($event): void {
     this.toggle = !this.toggle;
-    let trail = '...';
+    const trail = '...';
 
     if (this.toggle) {
       this.el.nativeElement.innerText = this.description;
@@ -26,7 +26,7 @@ export class ToggleButtonDirective implements OnInit {
     }
   }
   constructor(private el: ElementRef) {}
-  ngOnInit() {
+  ngOnInit(): void {
     this.el.nativeElement.innerText =
       this.description.substring(0, this.limit) + '...Read More';
   }

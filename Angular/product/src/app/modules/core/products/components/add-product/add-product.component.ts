@@ -33,14 +33,14 @@ export class AddProductComponent implements OnInit {
       ],
     });
   }
-  submit() {
+  submit(): void {
     if (this.form.valid) {
-      let product = this.form.value;
+      const product = this.form.value;
       this.productService.addProduct(product);
       this.close();
     }
   }
-  close() {
+  close(): void {
     this.addProduct = true;
   }
 }

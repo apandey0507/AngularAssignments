@@ -18,7 +18,7 @@ export class UndoComponent implements OnInit {
       this.vc.clear();
     }, 5000);
   }
-  undo() {
+  undo(): void {
     this.productService.undo(this.index);
     this.vc.clear();
   }

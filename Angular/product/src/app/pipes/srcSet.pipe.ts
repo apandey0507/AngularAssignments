@@ -1,8 +1,8 @@
-import { Pipe } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'customSrc',
 })
-export class SrcSetPipe {
+export class SrcSetPipe implements PipeTransform {
   srcPath: any = [];
   transform(value: string, args: string): string {
     this.srcPath.push(`${value} 1400w`);

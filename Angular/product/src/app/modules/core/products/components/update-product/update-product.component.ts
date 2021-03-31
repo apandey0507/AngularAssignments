@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ViewContainerRef,
-  ComponentFactoryResolver,
-} from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Product } from 'src/model/product';
@@ -16,14 +10,13 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./update-product.component.css'],
 })
 export class UpdateProductComponent implements OnInit {
-  @Input() index: number = 0;
+  @Input() index = 0;
   @Input() product: Product;
   @Input() vc: ViewContainerRef;
   form: FormGroup;
 
   constructor(
     public productService: ProductService,
-    private cfr: ComponentFactoryResolver,
     private formBuilder: FormBuilder
   ) {}
 
@@ -46,10 +39,10 @@ export class UpdateProductComponent implements OnInit {
 
     this.form.patchValue(this.product);
   }
-  cancel() {
+  cancel(): void {
     this.vc.clear();
   }
-  submit() {
+  submit(): void {
     if (this.form.valid) {
       this.product = Object.assign(this.product, this.form.value);
       this.productService.updateProduct(this.index, this.product);

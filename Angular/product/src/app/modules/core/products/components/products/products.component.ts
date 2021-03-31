@@ -18,9 +18,9 @@ import { ProductService } from '../../services/product.service';
 export class ProductsComponent implements OnInit {
   title = 'product';
 
-  typeFilter: string = '';
-  rangeFilter: number = 0;
-  brandFilter: string = '';
+  typeFilter = '';
+  rangeFilter = 0;
+  brandFilter = '';
 
   public productList: Array<Product>;
   @ViewChild('vc', { read: ViewContainerRef }) vc: ViewContainerRef;
@@ -31,11 +31,11 @@ export class ProductsComponent implements OnInit {
   ) {
     this.productList = [];
   }
-  dialog(index: number) {
+  dialog(index: number): void {
     this.vc.clear();
     import('../../../../Shared/dialog/dialog.component').then(
       ({ DialogComponent }) => {
-        let dialogcomp = this.vc.createComponent(
+        const dialogcomp = this.vc.createComponent(
           this.cfr.resolveComponentFactory(DialogComponent)
         );
         dialogcomp.instance.index = index;
@@ -44,7 +44,7 @@ export class ProductsComponent implements OnInit {
       }
     );
   }
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       if (params.productType) {
         this.typeFilter = params.productType;
@@ -60,11 +60,11 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
-  update(index: number, product: Product) {
+  update(index: number, product: Product): void {
     this.vc.clear();
     import('../update-product/update-product.component').then(
       ({ UpdateProductComponent }) => {
-        let updatecomp = this.vc.createComponent(
+        const updatecomp = this.vc.createComponent(
           this.cfr.resolveComponentFactory(UpdateProductComponent)
         );
         updatecomp.instance.index = index;
@@ -73,6 +73,4 @@ export class ProductsComponent implements OnInit {
       }
     );
   }
-
-  readMore(strLength) {}
 }

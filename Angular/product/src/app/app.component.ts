@@ -9,11 +9,11 @@ export class AppComponent {
   chatbot = true;
   @ViewChild('add') add;
   constructor() {}
-  showChatbot() {
+  showChatbot(): void {
     this.chatbot = !this.chatbot;
   }
 
-  AddProduct() {
+  AddProduct(): void {
     this.add.addProduct = !this.add.addProduct;
   }
 }

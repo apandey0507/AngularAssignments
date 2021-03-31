@@ -14,7 +14,7 @@ import { ProductService } from '../../core/products/services/product.service';
   styleUrls: ['dialog.component.css'],
 })
 export class DialogComponent implements OnInit {
-  @Input() index: number = 0;
+  @Input() index = 0;
   @Input() product: Product;
   @Input() vc: ViewContainerRef;
   constructor(
@@ -22,15 +22,15 @@ export class DialogComponent implements OnInit {
     private cfr: ComponentFactoryResolver
   ) {}
 
-  ngOnInit() {}
-  cancel() {
+  ngOnInit(): void {}
+  cancel(): void {
     this.vc.clear();
   }
-  remove() {
+  remove(): void {
     this.productService.removeProduct(this.index);
     this.vc.clear();
     import('../Undo/undo.component').then(({ UndoComponent }) => {
-      let undocomp = this.vc.createComponent(
+      const undocomp = this.vc.createComponent(
         this.cfr.resolveComponentFactory(UndoComponent)
       );
       undocomp.instance.index = this.index;

@@ -12,8 +12,8 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
     this.productList = [];
   }
-  async getProducts(type?, range?, brand?) {
-    let products = localStorage.getItem('productList');
+  async getProducts(type?, range?, brand?): Promise<void> {
+    const products = localStorage.getItem('productList');
     if (!products || type) {
       this.httpClient.get<any>('../assets/product.json').subscribe((data) => {
         this.productList = data;
@@ -34,22 +34,22 @@ export class ProductService {
     }
   }
 
-  removeProduct(index: number) {
+  removeProduct(index: number): void {
     this.removedProduct = this.productList[index];
     this.productList.splice(index, 1);
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
-  undo(index: number) {
+  undo(index: number): void {
     this.productList[index] = this.removedProduct;
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
 
-  updateProduct(index: number, product: Product) {
+  updateProduct(index: number, product: Product): void {
     this.productList[index] = product;
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
 
-  addProduct(product: Product) {
+  addProduct(product: Product): void {
     this.productList.push(product);
     localStorage.setItem('productList', JSON.stringify(this.productList));
   }
